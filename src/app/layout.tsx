@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { AuthProvider } from "@/contexts/AuthContext";
+import ClientLayout from '@/components/ClientLayout'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Swag AI - Your AI Wardrobe Assistant",
-  description: "Digitize your wardrobe and get AI-powered outfit suggestions",
+  title: "Swag AI - Your AI Personal Stylist",
+  description: "Get AI-powered outfit suggestions and style recommendations",
 };
 
 export default function RootLayout({
@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <AuthProvider>{children}</AuthProvider>
+        <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
   );
