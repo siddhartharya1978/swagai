@@ -1,134 +1,132 @@
-# Swag AI - Your AI-Powered Wardrobe Assistant
+# Swag AI - Your AI Wardrobe Assistant
 
-Swag AI is an intelligent wardrobe management system that helps you organize your clothes, generate outfit suggestions, and maintain a digital lookbook of your favorite combinations.
+Swag AI is a modern web application that helps users digitize their wardrobe and get AI-powered outfit suggestions. Built with Next.js 14, TypeScript, and Supabase.
 
 ## 🌟 Features
 
-### Core Features
-- **Smart Wardrobe Management**
-  - Upload clothing items with automatic background removal
-  - AI-powered tagging and categorization
-  - Advanced filtering and search capabilities
-  - Duplicate detection to prevent clutter
+- 🔐 **Authentication**
+  - Secure user authentication with Supabase
+  - Protected routes and API endpoints
+  - User profile management
 
-- **AI Outfit Generation**
-  - Context-aware outfit suggestions based on:
-    - Occasion
-    - Weather conditions
-    - Personal style preferences
-  - Real-time feedback system for outfit ratings
+- 👔 **Wardrobe Management**
+  - Digital wardrobe organization
+  - Upload and categorize clothing items
+  - Smart tagging and categorization
+  - Visual grid layout for easy browsing
 
-- **Digital Lookbook**
-  - Save and organize favorite outfits
-  - Share outfit combinations
-  - Track outfit history and preferences
+- 🤖 **AI-Powered Features**
+  - Smart outfit suggestions using Gemini 2.0 Flash
+  - Style recommendations based on preferences
+  - Weather-aware outfit planning
+  - Personalized fashion advice
 
-### Technical Features
-- Secure authentication with Supabase
-- Real-time data synchronization
-- Responsive design for all devices
-- Accessible UI with keyboard navigation
-- Comprehensive error handling
-- Loading states and animations
+- 📱 **User Experience**
+  - Responsive design with Tailwind CSS
+  - Modern UI components with shadcn/ui
+  - Dark/Light mode support
+  - Intuitive navigation
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
 - **Frontend**
   - Next.js 14 (App Router)
   - TypeScript
   - Tailwind CSS
   - shadcn/ui components
-  - Radix UI primitives
+  - React Query for data fetching
 
-- **Backend & Infrastructure**
-  - Supabase (Auth, Database, Storage)
-  - Google Gemini AI
-  - ApyHub (Background Removal)
+- **Backend**
+  - Supabase
+    - Authentication
+    - PostgreSQL Database
+    - Storage for images
+  - Gemini 2.0 Flash API for AI features
+
+- **Testing**
+  - Jest
+  - React Testing Library
+  - MSW for API mocking
 
 ## 🚀 Getting Started
 
-### Prerequisites
-- Node.js 18+ and npm
-- Supabase account
-- Google Cloud account (for Gemini AI)
-- ApyHub account
-
-### Installation
-
-1. Clone the repository:
+1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/swag-ai.git
-   cd swag-ai
+   git clone https://github.com/siddhartharya1978/swagai.git
+   cd swagai
    ```
 
-2. Install dependencies:
+2. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. Set up environment variables:
-   - Copy `.env.example` to `.env.local`
-   - Fill in your API keys and configuration values
+3. **Set up environment variables**
+   Create a `.env.local` file in the root directory with:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=your-project-url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
+   NEXT_PUBLIC_GEMINI_API_KEY=your-gemini-api-key
+   ```
 
-4. Start the development server:
+4. **Run the development server**
    ```bash
    npm run dev
    ```
 
-### Environment Variables
+5. **Open [http://localhost:3000](http://localhost:3000) in your browser**
 
-Create a `.env.local` file with the following variables:
+## 📁 Project Structure
+
 ```
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-NEXT_PUBLIC_GEMINI_API_KEY=your_gemini_api_key
-NEXT_PUBLIC_APYHUB_API_KEY=your_apyhub_api_key
+src/
+├── app/                    # Next.js app directory
+│   ├── api/               # API routes
+│   ├── dashboard/         # Dashboard pages
+│   └── signin/           # Authentication pages
+├── components/            # React components
+│   ├── auth/             # Authentication components
+│   ├── ui/               # Reusable UI components
+│   ├── wardrobe/         # Wardrobe management
+│   └── outfits/          # Outfit suggestions
+├── lib/                  # Utility functions
+│   ├── api/              # API clients
+│   └── supabase.ts       # Supabase configuration
+└── types/                # TypeScript type definitions
 ```
 
-## 🚢 Deployment
+## 🧪 Testing
 
-### Deploying to Vercel
+Run the test suite:
+```bash
+npm test
+```
 
-1. Push your code to GitHub
-2. Import your repository in Vercel
-3. Configure environment variables in Vercel dashboard
-4. Deploy!
+Run tests in watch mode:
+```bash
+npm run test:watch
+```
 
-The app will be automatically built and deployed. Vercel will provide you with a production URL.
+## 📝 Contributing
 
-### Post-Deployment Checklist
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-- [ ] Verify all environment variables are set
-- [ ] Test authentication flow
-- [ ] Verify image upload and processing
-- [ ] Test outfit generation
-- [ ] Check lookbook functionality
-- [ ] Verify responsive design
-- [ ] Test error handling
-- [ ] Check loading states
-- [ ] Verify tooltips and accessibility
+## 📄 License
 
-## 🗺 Roadmap
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### Post-MVP Features
-- Social sharing capabilities
-- Style recommendations based on trends
-- Seasonal wardrobe organization
-- Shopping recommendations
-- Outfit history analytics
-- Mobile app development
+## 👥 Authors
 
-## 🤝 Contributing
-
-Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+- **Siddharth Arya** - *Initial work* - [siddhartharya1978](https://github.com/siddhartharya1978)
 
 ## 🙏 Acknowledgments
 
-- Google Gemini AI for intelligent outfit generation
-- ApyHub for background removal service
-- Supabase for backend infrastructure
-- shadcn/ui for beautiful components
+- [Next.js](https://nextjs.org/)
+- [Supabase](https://supabase.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Gemini AI](https://deepmind.google/technologies/gemini/)
